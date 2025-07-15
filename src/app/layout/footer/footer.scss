@@ -1,0 +1,16 @@
+.footer-container {
+  background-color: #1a1a1a; // A slightly lighter dark color, same as About photo background
+  border-top: 1px solid rgba(255, 193, 7, 0.2); // Subtle yellow top border
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  color: var(--bs-secondary-color);
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--bs-warning); // Changes to yellow on hover
+    transform: translateY(-3px);
+  }
+}

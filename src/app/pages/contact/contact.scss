@@ -1,0 +1,55 @@
+// Animation for the component to fade in
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Apply fade-in animation to the entire component
+:host {
+  display: block;
+  animation: fade-in 0.6s ease-out;
+}
+
+// Shared glass card style
+.contact-info-card,
+.contact-form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+}
+
+// Styles for the contact info items on the left
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  i {
+    font-size: 1.5rem;
+    color: var(--bs-warning);
+    width: 50px;
+    text-align: center;
+    margin-right: 1rem;
+  }
+}
+
+// Styles for the form controls on the right
+.form-control {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--bs-body-color);
+
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: var(--bs-warning);
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+    color: var(--bs-body-color);
+  }
+}

@@ -4,6 +4,7 @@ import { About } from './pages/about/about';
 import { Experience } from './pages/experience/experience';
 import { Projects } from './pages/projects/projects';
 import { Skills } from './pages/skills/skills';
+import { Contact } from './pages/contact/contact';
 
 export const routes: Routes = [
   // When the user is at the base URL, show the HomeComponent
@@ -12,6 +13,7 @@ export const routes: Routes = [
   { path: 'experience', component: Experience },
   { path: 'skills', component: Skills },
   { path: 'projects', component: Projects },
+  { path: 'contact', component: Contact },
   // You can add other routes here later
   // { path: 'about', component: AboutComponent },
   // { path: 'projects', component: ProjectsComponent },
