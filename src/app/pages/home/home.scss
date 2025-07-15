@@ -1,0 +1,57 @@
+.hero-section {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+
+// Floating animation for the image
+.hero-image {
+  width: 350px; // Set a base size for large screens
+  height: 350px;
+  object-fit: cover;
+  animation: float-animation 4s ease-in-out infinite;
+}
+
+@keyframes float-animation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+// Styling for social media icons
+.social-icon {
+  font-size: 1.75rem;
+  margin: 0 0.75rem;
+  color: var(--bs-secondary-color);
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--bs-warning);
+    transform: translateY(-5px);
+  }
+}
+
+/* 1. Responsive styles for smaller screens (tablets and phones) */
+@media (max-width: 991.98px) {
+  .hero-section {
+    min-height: auto; // Let content define the height
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-image {
+    width: 220px; // Make the image smaller
+    height: 220px;
+  }
+
+  // Reduce the main heading size
+  .display-4 {
+    font-size: 2.5rem;
+  }
+}
