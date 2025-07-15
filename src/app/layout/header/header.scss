@@ -18,6 +18,11 @@ $active-pill-text: #121212; // Dark text on the yellow pill
   transition: all 0.3s ease;
   font-weight: 500;
 
+  // ADDED: Hover effect for non-active links
+  &:hover:not(.active) {
+    color: var(--bs-warning);
+  }
+
   // Style for the active "pill"
   &.active {
     background-color: $active-pill-background;
