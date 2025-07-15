@@ -1,0 +1,27 @@
+// Pill style for the active navigation link
+$active-pill-background: #ffc107; // Using the primary yellow
+$active-pill-text: #121212; // Dark text on the yellow pill
+
+.navbar-integrated {
+  // Semi-transparent background that blends with the page
+  background: rgba(18, 18, 18, 0.85); // Matches the dark body background
+
+  // The "frosted glass" effect
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); // For Safari
+
+  // Subtle bottom border for separation
+  border-bottom: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+.nav-link {
+  transition: all 0.3s ease;
+  font-weight: 500;
+
+  // Style for the active "pill"
+  &.active {
+    background-color: $active-pill-background;
+    color: $active-pill-text !important;
+    border-radius: 0.75rem;
+  }
+}
