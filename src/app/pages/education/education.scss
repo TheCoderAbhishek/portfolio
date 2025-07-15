@@ -1,0 +1,66 @@
+// Animation for the component to fade in
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Apply fade-in animation to the entire component
+:host {
+  display: block;
+  animation: fade-in 0.6s ease-out;
+}
+
+// Styling for the main education card
+.education-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  overflow: hidden; // Ensures the border-radius is respected by child elements
+}
+
+.card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 193, 7, 0.2); // Subtle yellow border
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+// Styling for the list of details (CGPA, Honors, etc.)
+.details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    i {
+      font-size: 1.25rem;
+      color: var(--bs-warning);
+      width: 30px;
+      text-align: center;
+      margin-top: 0.25rem;
+      margin-right: 1rem;
+    }
+
+    strong {
+      margin-right: 0.5rem;
+    }
+  }
+}
