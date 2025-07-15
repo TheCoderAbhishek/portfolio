@@ -1,0 +1,55 @@
+// Animation for cards to fade in
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Grid layout for the skill cards
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  // Glassmorphism effect
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+
+  // Layout and style
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  // Staggered animation effect
+  opacity: 0; // Start hidden
+  animation: fade-in 0.5s ease-out forwards;
+
+  // Add a delay to each card in the grid
+  @for $i from 1 through 20 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.05}s;
+    }
+  }
+
+  i {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--bs-warning);
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
