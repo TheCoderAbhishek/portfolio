@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+// 1. Your custom variable overrides.
+// Example: Change the primary color.
+$primary: #7d2ae8;
+
+// 2. Import all of Bootstrap's SCSS
+@import "bootstrap/scss/bootstrap";
+
+// 3. Add any of your own custom global styles here
+
+// 4. Import Bootstrap Icons
+@import "bootstrap-icons/font/bootstrap-icons.css";
